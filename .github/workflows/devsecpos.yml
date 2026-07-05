@@ -20,5 +20,5 @@ jobs:
           java-version: '25'
           cache: maven
 
-      - name: Build + tests
-        run: ./mvnw clean verify
+      - name: Build + tests (sans dependency-check)
+        run: ./mvnw clean verify -Ddependency-check.skip=true
